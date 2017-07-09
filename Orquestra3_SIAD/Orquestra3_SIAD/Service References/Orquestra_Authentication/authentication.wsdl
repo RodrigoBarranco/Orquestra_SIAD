@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cryo.com.br/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.cryo.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cryo.com.br/">
+      <s:element name="Login01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DsUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login02">
+        <s:complexType />
+      </s:element>
+      <s:element name="Login02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login02Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login03">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DsUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login03Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login03Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginBiometric01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DsUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Base64StringFingerprint" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginBiometric01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginBiometric01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveFingerprint">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DsUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Base64StringFingerprint" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveFingerprintResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveFingerprintResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Assume01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsUsername" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Assume01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Assume01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAuthenticated01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAuthenticated01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsAuthenticated01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Login01SoapIn">
+    <wsdl:part name="parameters" element="tns:Login01" />
+  </wsdl:message>
+  <wsdl:message name="Login01SoapOut">
+    <wsdl:part name="parameters" element="tns:Login01Response" />
+  </wsdl:message>
+  <wsdl:message name="Login02SoapIn">
+    <wsdl:part name="parameters" element="tns:Login02" />
+  </wsdl:message>
+  <wsdl:message name="Login02SoapOut">
+    <wsdl:part name="parameters" element="tns:Login02Response" />
+  </wsdl:message>
+  <wsdl:message name="Login03SoapIn">
+    <wsdl:part name="parameters" element="tns:Login03" />
+  </wsdl:message>
+  <wsdl:message name="Login03SoapOut">
+    <wsdl:part name="parameters" element="tns:Login03Response" />
+  </wsdl:message>
+  <wsdl:message name="LoginBiometric01SoapIn">
+    <wsdl:part name="parameters" element="tns:LoginBiometric01" />
+  </wsdl:message>
+  <wsdl:message name="LoginBiometric01SoapOut">
+    <wsdl:part name="parameters" element="tns:LoginBiometric01Response" />
+  </wsdl:message>
+  <wsdl:message name="SaveFingerprintSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveFingerprint" />
+  </wsdl:message>
+  <wsdl:message name="SaveFingerprintSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveFingerprintResponse" />
+  </wsdl:message>
+  <wsdl:message name="Assume01SoapIn">
+    <wsdl:part name="parameters" element="tns:Assume01" />
+  </wsdl:message>
+  <wsdl:message name="Assume01SoapOut">
+    <wsdl:part name="parameters" element="tns:Assume01Response" />
+  </wsdl:message>
+  <wsdl:message name="IsAuthenticated01SoapIn">
+    <wsdl:part name="parameters" element="tns:IsAuthenticated01" />
+  </wsdl:message>
+  <wsdl:message name="IsAuthenticated01SoapOut">
+    <wsdl:part name="parameters" element="tns:IsAuthenticated01Response" />
+  </wsdl:message>
+  <wsdl:portType name="AuthenticationSoap">
+    <wsdl:operation name="Login01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realizar login do usuário e retorna ticket de autenticação</wsdl:documentation>
+      <wsdl:input message="tns:Login01SoapIn" />
+      <wsdl:output message="tns:Login01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realizar login do usuário quando sistema utiliza autenticação integrada</wsdl:documentation>
+      <wsdl:input message="tns:Login02SoapIn" />
+      <wsdl:output message="tns:Login02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login03">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realizar login do usuário e retorna ticket de autenticação</wsdl:documentation>
+      <wsdl:input message="tns:Login03SoapIn" />
+      <wsdl:output message="tns:Login03SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginBiometric01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realizar login com username e imagem da digital e retorna ticket de autenticação</wsdl:documentation>
+      <wsdl:input message="tns:LoginBiometric01SoapIn" />
+      <wsdl:output message="tns:LoginBiometric01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFingerprint">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realizar login do usuário e retorna ticket de autenticação</wsdl:documentation>
+      <wsdl:input message="tns:SaveFingerprintSoapIn" />
+      <wsdl:output message="tns:SaveFingerprintSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Assume01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realizar troca de usuário e retorna novo ticket</wsdl:documentation>
+      <wsdl:input message="tns:Assume01SoapIn" />
+      <wsdl:output message="tns:Assume01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Verifica se o ticket continua autenticado</wsdl:documentation>
+      <wsdl:input message="tns:IsAuthenticated01SoapIn" />
+      <wsdl:output message="tns:IsAuthenticated01SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthenticationSoap" type="tns:AuthenticationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login01">
+      <soap:operation soapAction="http://www.cryo.com.br/Login01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login02">
+      <soap:operation soapAction="http://www.cryo.com.br/Login02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login03">
+      <soap:operation soapAction="http://www.cryo.com.br/Login03" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginBiometric01">
+      <soap:operation soapAction="http://www.cryo.com.br/LoginBiometric01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFingerprint">
+      <soap:operation soapAction="http://www.cryo.com.br/SaveFingerprint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Assume01">
+      <soap:operation soapAction="http://www.cryo.com.br/Assume01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated01">
+      <soap:operation soapAction="http://www.cryo.com.br/IsAuthenticated01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthenticationSoap12" type="tns:AuthenticationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login01">
+      <soap12:operation soapAction="http://www.cryo.com.br/Login01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login02">
+      <soap12:operation soapAction="http://www.cryo.com.br/Login02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login03">
+      <soap12:operation soapAction="http://www.cryo.com.br/Login03" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginBiometric01">
+      <soap12:operation soapAction="http://www.cryo.com.br/LoginBiometric01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFingerprint">
+      <soap12:operation soapAction="http://www.cryo.com.br/SaveFingerprint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Assume01">
+      <soap12:operation soapAction="http://www.cryo.com.br/Assume01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated01">
+      <soap12:operation soapAction="http://www.cryo.com.br/IsAuthenticated01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Authentication">
+    <wsdl:port name="AuthenticationSoap" binding="tns:AuthenticationSoap">
+      <soap:address location="http://localhost/WebService/v2.5/authentication.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AuthenticationSoap12" binding="tns:AuthenticationSoap12">
+      <soap12:address location="http://localhost/WebService/v2.5/authentication.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

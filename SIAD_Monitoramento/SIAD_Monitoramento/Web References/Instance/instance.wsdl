@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cryo.com.br/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.cryo.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cryo.com.br/">
+      <s:element name="CreateInstance01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlow" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Simulation" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstance01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateInstance01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstance02">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodArea" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodPosition" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlow" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Simulation" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstance02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateInstance02Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstanceSubprocess01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowSubprocess" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Simulation" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowParent" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecuteParent" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFlowElementAlias" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstanceSubprocess01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateInstanceSubprocess01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cancel01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cancel01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cancel01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cancel02">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsObs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cancel02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cancel02Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetXml01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetXml01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetXml01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateForm01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateForm01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateForm01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecuteTask" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinalizeTask01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask02">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecuteTask" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFlowResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinalizeTask02Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask03">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFlowElementAlias" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask03Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinalizeTask03Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask04">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFlowElementAlias" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFlowResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeTask04Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinalizeTask04Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AttachFile01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecuteTask" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFilePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsResume" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequesterCanSee" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AttachFile01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AttachFile01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AttachFile02">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFlowElementAlias" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFilePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsResume" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequesterCanSee" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AttachFile02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AttachFile02Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMessage01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecuteTask" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsMessage" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequesterCanSee" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMessage01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMessage01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateInstance01SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateInstance01" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstance01SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateInstance01Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstance02SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateInstance02" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstance02SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateInstance02Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstanceSubprocess01SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateInstanceSubprocess01" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstanceSubprocess01SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateInstanceSubprocess01Response" />
+  </wsdl:message>
+  <wsdl:message name="Cancel01SoapIn">
+    <wsdl:part name="parameters" element="tns:Cancel01" />
+  </wsdl:message>
+  <wsdl:message name="Cancel01SoapOut">
+    <wsdl:part name="parameters" element="tns:Cancel01Response" />
+  </wsdl:message>
+  <wsdl:message name="Cancel02SoapIn">
+    <wsdl:part name="parameters" element="tns:Cancel02" />
+  </wsdl:message>
+  <wsdl:message name="Cancel02SoapOut">
+    <wsdl:part name="parameters" element="tns:Cancel02Response" />
+  </wsdl:message>
+  <wsdl:message name="GetXml01SoapIn">
+    <wsdl:part name="parameters" element="tns:GetXml01" />
+  </wsdl:message>
+  <wsdl:message name="GetXml01SoapOut">
+    <wsdl:part name="parameters" element="tns:GetXml01Response" />
+  </wsdl:message>
+  <wsdl:message name="UpdateForm01SoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateForm01" />
+  </wsdl:message>
+  <wsdl:message name="UpdateForm01SoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateForm01Response" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask01SoapIn">
+    <wsdl:part name="parameters" element="tns:FinalizeTask01" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask01SoapOut">
+    <wsdl:part name="parameters" element="tns:FinalizeTask01Response" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask02SoapIn">
+    <wsdl:part name="parameters" element="tns:FinalizeTask02" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask02SoapOut">
+    <wsdl:part name="parameters" element="tns:FinalizeTask02Response" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask03SoapIn">
+    <wsdl:part name="parameters" element="tns:FinalizeTask03" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask03SoapOut">
+    <wsdl:part name="parameters" element="tns:FinalizeTask03Response" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask04SoapIn">
+    <wsdl:part name="parameters" element="tns:FinalizeTask04" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeTask04SoapOut">
+    <wsdl:part name="parameters" element="tns:FinalizeTask04Response" />
+  </wsdl:message>
+  <wsdl:message name="AttachFile01SoapIn">
+    <wsdl:part name="parameters" element="tns:AttachFile01" />
+  </wsdl:message>
+  <wsdl:message name="AttachFile01SoapOut">
+    <wsdl:part name="parameters" element="tns:AttachFile01Response" />
+  </wsdl:message>
+  <wsdl:message name="AttachFile02SoapIn">
+    <wsdl:part name="parameters" element="tns:AttachFile02" />
+  </wsdl:message>
+  <wsdl:message name="AttachFile02SoapOut">
+    <wsdl:part name="parameters" element="tns:AttachFile02Response" />
+  </wsdl:message>
+  <wsdl:message name="AddMessage01SoapIn">
+    <wsdl:part name="parameters" element="tns:AddMessage01" />
+  </wsdl:message>
+  <wsdl:message name="AddMessage01SoapOut">
+    <wsdl:part name="parameters" element="tns:AddMessage01Response" />
+  </wsdl:message>
+  <wsdl:portType name="InstanceSoap">
+    <wsdl:operation name="CreateInstance01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Criar uma instância de um processo</wsdl:documentation>
+      <wsdl:input message="tns:CreateInstance01SoapIn" />
+      <wsdl:output message="tns:CreateInstance01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstance02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Criar uma instância de um processo, definindo a área e posição do requisitante</wsdl:documentation>
+      <wsdl:input message="tns:CreateInstance02SoapIn" />
+      <wsdl:output message="tns:CreateInstance02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstanceSubprocess01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Criar uma instância de um subprocesso definindo o processo pai e o elemento que o iniciou.</wsdl:documentation>
+      <wsdl:input message="tns:CreateInstanceSubprocess01SoapIn" />
+      <wsdl:output message="tns:CreateInstanceSubprocess01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cancel01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancelar a execução de uma instância de um processo</wsdl:documentation>
+      <wsdl:input message="tns:Cancel01SoapIn" />
+      <wsdl:output message="tns:Cancel01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cancel02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancelar a execução de uma instância de um processo</wsdl:documentation>
+      <wsdl:input message="tns:Cancel02SoapIn" />
+      <wsdl:output message="tns:Cancel02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXml01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consultar XML com todos os dados da instância de um processo</wsdl:documentation>
+      <wsdl:input message="tns:GetXml01SoapIn" />
+      <wsdl:output message="tns:GetXml01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateForm01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Atualizar um ou mais campos do formulário de uma instância de um processo</wsdl:documentation>
+      <wsdl:input message="tns:UpdateForm01SoapIn" />
+      <wsdl:output message="tns:UpdateForm01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finalizar uma tarefa pendente, a partir da chave primária</wsdl:documentation>
+      <wsdl:input message="tns:FinalizeTask01SoapIn" />
+      <wsdl:output message="tns:FinalizeTask01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finalizar uma tarefa pendente, a partir da chave primária, e com resultado genérico</wsdl:documentation>
+      <wsdl:input message="tns:FinalizeTask02SoapIn" />
+      <wsdl:output message="tns:FinalizeTask02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask03">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finalizar uma tarefa pendente, a partir do nome do elemento</wsdl:documentation>
+      <wsdl:input message="tns:FinalizeTask03SoapIn" />
+      <wsdl:output message="tns:FinalizeTask03SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask04">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finalizar uma tarefa pendente, a partir do nome do elemento, e com resultado genérico</wsdl:documentation>
+      <wsdl:input message="tns:FinalizeTask04SoapIn" />
+      <wsdl:output message="tns:FinalizeTask04SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AttachFile01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Anexar um arquivo a uma instância de um processo, a partir da chave primária da tarefa</wsdl:documentation>
+      <wsdl:input message="tns:AttachFile01SoapIn" />
+      <wsdl:output message="tns:AttachFile01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AttachFile02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Anexar um arquivo a uma instância de um processo, a partir do nome do elemento da tarefa</wsdl:documentation>
+      <wsdl:input message="tns:AttachFile02SoapIn" />
+      <wsdl:output message="tns:AttachFile02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMessage01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Anexar uma mensagem a uma instância de um processo, a partir da chave da tarefa</wsdl:documentation>
+      <wsdl:input message="tns:AddMessage01SoapIn" />
+      <wsdl:output message="tns:AddMessage01SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InstanceSoap" type="tns:InstanceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateInstance01">
+      <soap:operation soapAction="http://www.cryo.com.br/CreateInstance01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstance02">
+      <soap:operation soapAction="http://www.cryo.com.br/CreateInstance02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstanceSubprocess01">
+      <soap:operation soapAction="http://www.cryo.com.br/CreateInstanceSubprocess01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancel01">
+      <soap:operation soapAction="http://www.cryo.com.br/Cancel01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancel02">
+      <soap:operation soapAction="http://www.cryo.com.br/Cancel02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXml01">
+      <soap:operation soapAction="http://www.cryo.com.br/GetXml01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateForm01">
+      <soap:operation soapAction="http://www.cryo.com.br/UpdateForm01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask01">
+      <soap:operation soapAction="http://www.cryo.com.br/FinalizeTask01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask02">
+      <soap:operation soapAction="http://www.cryo.com.br/FinalizeTask02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask03">
+      <soap:operation soapAction="http://www.cryo.com.br/FinalizeTask03" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask04">
+      <soap:operation soapAction="http://www.cryo.com.br/FinalizeTask04" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachFile01">
+      <soap:operation soapAction="http://www.cryo.com.br/AttachFile01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachFile02">
+      <soap:operation soapAction="http://www.cryo.com.br/AttachFile02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMessage01">
+      <soap:operation soapAction="http://www.cryo.com.br/AddMessage01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InstanceSoap12" type="tns:InstanceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateInstance01">
+      <soap12:operation soapAction="http://www.cryo.com.br/CreateInstance01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstance02">
+      <soap12:operation soapAction="http://www.cryo.com.br/CreateInstance02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstanceSubprocess01">
+      <soap12:operation soapAction="http://www.cryo.com.br/CreateInstanceSubprocess01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancel01">
+      <soap12:operation soapAction="http://www.cryo.com.br/Cancel01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancel02">
+      <soap12:operation soapAction="http://www.cryo.com.br/Cancel02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXml01">
+      <soap12:operation soapAction="http://www.cryo.com.br/GetXml01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateForm01">
+      <soap12:operation soapAction="http://www.cryo.com.br/UpdateForm01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask01">
+      <soap12:operation soapAction="http://www.cryo.com.br/FinalizeTask01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask02">
+      <soap12:operation soapAction="http://www.cryo.com.br/FinalizeTask02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask03">
+      <soap12:operation soapAction="http://www.cryo.com.br/FinalizeTask03" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeTask04">
+      <soap12:operation soapAction="http://www.cryo.com.br/FinalizeTask04" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachFile01">
+      <soap12:operation soapAction="http://www.cryo.com.br/AttachFile01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachFile02">
+      <soap12:operation soapAction="http://www.cryo.com.br/AttachFile02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMessage01">
+      <soap12:operation soapAction="http://www.cryo.com.br/AddMessage01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Instance">
+    <wsdl:port name="InstanceSoap" binding="tns:InstanceSoap">
+      <soap:address location="http://localhost/WebService/v2.5/instance.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InstanceSoap12" binding="tns:InstanceSoap12">
+      <soap12:address location="http://localhost/WebService/v2.5/instance.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

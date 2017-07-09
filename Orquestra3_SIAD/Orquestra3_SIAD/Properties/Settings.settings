@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Orquestra3_SIAD.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Orquestra3_SIAD_Authentication_Authentication" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/WebService/v2.5/authentication.asmx</Value>
+    </Setting>
+    <Setting Name="Orquestra3_SIAD_Instance_Instance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/WebService/v2.5/instance.asmx</Value>
+    </Setting>
+    <Setting Name="Orquestra3_SIAD_Workspace_Workspace" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/webservice/v2.5/workspace.asmx</Value>
+    </Setting>
+    <Setting Name="Orquestra3_SIAD_QueryString_QueryString" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/webservice/v2.5/querystring.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

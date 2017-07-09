@@ -1,0 +1,36 @@
+﻿Instalando o assembly 'D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe'.
+Parâmetros afetados são:
+   r = 
+   logfile = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.InstallLog
+   assemblypath = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe
+   logtoconsole = 
+Instalando o serviço SIAD_Monitoramento...
+Criando a origem de EventLog SIAD_Monitoramento no log Application...
+Revertendo o assembly 'D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe'.
+Parâmetros afetados são:
+   r = 
+   logfile = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.InstallLog
+   assemblypath = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe
+   logtoconsole = 
+Restaurando o log de eventos para o estado anterior da origem SIAD_Monitoramento.
+Desinstalando o assembly 'D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.InstallLog
+   assemblypath = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe
+Removendo a origem do EventLog SIAD_Monitoramento.
+Serviço SIAD_Monitoramento está sendo removido do sistema...
+Serviço SIAD_Monitoramento foi removido com êxito do sistema.
+Instalando o assembly 'D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.InstallLog
+   assemblypath = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe
+Instalando o serviço SIAD_Monitoramento...
+Serviço SIAD_Monitoramento foi instalado com êxito.
+Criando a origem de EventLog SIAD_Monitoramento no log Application...
+Confirmando o assembly 'D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.InstallLog
+   assemblypath = D:\Dev\SIAD_Monitoramento\SIAD_Monitoramento\bin\Release\SIAD_Monitoramento.exe

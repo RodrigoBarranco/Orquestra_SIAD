@@ -1,0 +1,17 @@
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.dll.config
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Orquestra3_SIAD.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Orquestra3_SIAD.XmlSerializers.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Orquestra3_SIAD.pdb
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.IO.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.MachineLearning.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.Math.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.Statistics.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.xml
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.IO.xml
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.MachineLearning.xml
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.Math.xml
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\bin\Accord.Statistics.xml
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\obj\Release\Orquestra3_SIAD.dll
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\obj\Release\Orquestra3_SIAD.pdb
+D:\Dev\Orquestra3_SIAD\Orquestra3_SIAD\obj\Release\Orquestra3_SIAD.XmlSerializers.dll

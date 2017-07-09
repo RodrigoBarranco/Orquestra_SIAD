@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cryo.com.br/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.cryo.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cryo.com.br/">
+      <s:element name="ListPending01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPending01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPending01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPending02">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlow" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsFlowElementAlias" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NbDaysSinceStarted" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPending02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPending02Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPending03">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecordLimit" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPending03Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPending03Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPending04">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodFlowExecute" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPending04Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPending04Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListStart01">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListStart01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListStart01Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListPending01SoapIn">
+    <wsdl:part name="parameters" element="tns:ListPending01" />
+  </wsdl:message>
+  <wsdl:message name="ListPending01SoapOut">
+    <wsdl:part name="parameters" element="tns:ListPending01Response" />
+  </wsdl:message>
+  <wsdl:message name="ListPending02SoapIn">
+    <wsdl:part name="parameters" element="tns:ListPending02" />
+  </wsdl:message>
+  <wsdl:message name="ListPending02SoapOut">
+    <wsdl:part name="parameters" element="tns:ListPending02Response" />
+  </wsdl:message>
+  <wsdl:message name="ListPending03SoapIn">
+    <wsdl:part name="parameters" element="tns:ListPending03" />
+  </wsdl:message>
+  <wsdl:message name="ListPending03SoapOut">
+    <wsdl:part name="parameters" element="tns:ListPending03Response" />
+  </wsdl:message>
+  <wsdl:message name="ListPending04SoapIn">
+    <wsdl:part name="parameters" element="tns:ListPending04" />
+  </wsdl:message>
+  <wsdl:message name="ListPending04SoapOut">
+    <wsdl:part name="parameters" element="tns:ListPending04Response" />
+  </wsdl:message>
+  <wsdl:message name="ListStart01SoapIn">
+    <wsdl:part name="parameters" element="tns:ListStart01" />
+  </wsdl:message>
+  <wsdl:message name="ListStart01SoapOut">
+    <wsdl:part name="parameters" element="tns:ListStart01Response" />
+  </wsdl:message>
+  <wsdl:portType name="WorkspaceSoap">
+    <wsdl:operation name="ListPending01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consultar a lista de tarefas pendentes de um usuário</wsdl:documentation>
+      <wsdl:input message="tns:ListPending01SoapIn" />
+      <wsdl:output message="tns:ListPending01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPending02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consultar a lista de todas as tarefas pendentes de um determinado tipo, que estão abertas a X dias</wsdl:documentation>
+      <wsdl:input message="tns:ListPending02SoapIn" />
+      <wsdl:output message="tns:ListPending02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPending03">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consultar a lista de tarefas pendentes de um usuário definindo limite de registros retornados</wsdl:documentation>
+      <wsdl:input message="tns:ListPending03SoapIn" />
+      <wsdl:output message="tns:ListPending03SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPending04">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consultar a lista de todas as tarefas pendentes de um determinado processo.</wsdl:documentation>
+      <wsdl:input message="tns:ListPending04SoapIn" />
+      <wsdl:output message="tns:ListPending04SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListStart01">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consultar a lista de processos que o usuário pode iniciar</wsdl:documentation>
+      <wsdl:input message="tns:ListStart01SoapIn" />
+      <wsdl:output message="tns:ListStart01SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WorkspaceSoap" type="tns:WorkspaceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListPending01">
+      <soap:operation soapAction="http://www.cryo.com.br/ListPending01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPending02">
+      <soap:operation soapAction="http://www.cryo.com.br/ListPending02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPending03">
+      <soap:operation soapAction="http://www.cryo.com.br/ListPending03" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPending04">
+      <soap:operation soapAction="http://www.cryo.com.br/ListPending04" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListStart01">
+      <soap:operation soapAction="http://www.cryo.com.br/ListStart01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WorkspaceSoap12" type="tns:WorkspaceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListPending01">
+      <soap12:operation soapAction="http://www.cryo.com.br/ListPending01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPending02">
+      <soap12:operation soapAction="http://www.cryo.com.br/ListPending02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPending03">
+      <soap12:operation soapAction="http://www.cryo.com.br/ListPending03" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPending04">
+      <soap12:operation soapAction="http://www.cryo.com.br/ListPending04" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListStart01">
+      <soap12:operation soapAction="http://www.cryo.com.br/ListStart01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Workspace">
+    <wsdl:port name="WorkspaceSoap" binding="tns:WorkspaceSoap">
+      <soap:address location="http://localhost/webservice/v2.5/workspace.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WorkspaceSoap12" binding="tns:WorkspaceSoap12">
+      <soap12:address location="http://localhost/webservice/v2.5/workspace.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
